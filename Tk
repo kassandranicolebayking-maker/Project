@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+
+  <style>
+    /* Reset and Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Header / Intro */
+    header {
+      background: #111;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .intro-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .intro-text {
+      text-align: center;
+      max-width: 500px;
+    }
+    .intro-image img {
+      border-radius: 8px;
+      border: 2px solid #fff;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* Navigation */
+    nav {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      border-bottom: 1px solid #333;
+      z-index: 10;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 8px 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #aaa; }
+
+    /* Sections */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    #about p, #experience p, #contact p {
+      text-align: center;
+      color: #ccc;
+    }
+
+    /* Experience */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .job {
+      background: #111;
+      padding: 20px;
+      border-radius: 6px;
+      border-left: 3px solid #fff;
+    }
+    .job h3 { margin-bottom: 5px; color: #fff; }
+    .job span { font-size: 0.9rem; color: #aaa; display: block; margin-bottom: 10px; }
+    .job p { color: #ccc; text-align: justify; }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project {
+      background: #111;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+    .project img {
+      max-width: 100%;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    .project h3 { margin-bottom: 10px; color: #fff; }
+    .project p { color: #ccc; }
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .project a:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* Filter Buttons */
+    .filter-btn {
+      background: #111;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 8px 16px;
+      margin: 5px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .filter-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    /* Contact */
+    #contact a {
+      color: #fff;
+      text-decoration: none;
+    }
+    #contact a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #777;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro -->
+  <header id="intro">
+    <div class="intro-container">
+      <div class="intro-image">
+        <a href="/" target="_blank">
+          <img src="mypic.jpg" alt="My Picture" />
+        </a>
+      </div>
+      <div class="intro-text">
+        <h2>Hi, I'm John Therence G. Jawod</h2>
+        <p>BSIT Student of Central Philippines State University (CPSU)</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#intro">Intro</a>
+    <a href="#about">About Me</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm John Therence G. Jawod, a passionate BSIT student who loves creating functional and minimalist designs, code and edit. I enjoy editing, making projects and reading when I have free time.</p>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="job">
+        <h3>OJT <span>– Michael Computer Solution</span></h3>
+        <span>2023 - 2024</span>
+        <p>I was a TVL-CSS student at Cabacungan National High School. During my OJT at Michael Computer Solution in Bacolod, I made piso WiFi machines, RJ45 Ethernet cords, and set up computers. Thanks to Sir Michael and his team, I learned a lot of practical skills.</p>
+      </div>
+
+      <div class="job">
+        <h3>Student <span>– Cabacungan National High School - Senior High</span></h3>
+        <span>2021 - 2022</span>
+        <p>In high school, I was a TVL-CSS student. I learned how to format computers, install operating systems, make RJ45 cables, and set up simple client/server networks.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <!-- Filter Buttons -->
+    <div style="text-align:center; margin-bottom:30px;">
+      <button class="filter-btn" onclick="filterProjects('all')">All</button>
+      <button class="filter-btn" onclick="filterProjects('youtube')">YouTube Tutorials</button>
+      <button class="filter-btn" onclick="filterProjects('school')">School Outputs</button>
+    </div>
+
+    <div class="projects">
+      <!-- YouTube -->
+      <div class="project youtube">
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/NZMPyx1fCgk"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <h3>Video Project One</h3>
+        <p>My YouTube video project about coding.</p>
+        <a href="https://youtu.be/NZMPyx1fCgk" target="_blank">Watch on YouTube</a>
+      </div>
+
+      <div class="project youtube">
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/NZMPyx1fCgk"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <h3>Video Project Two</h3>
+        <p>Tutorial video I made for web development.</p>
+        <a href="https://youtu.be/NZMPyx1fCgk" target="_blank">Watch on YouTube</a>
+      </div>
+
+      <!-- School Projects -->
+      <div class="project school">
+        <img src="Jawod.file/canva.jpg" alt="School Project 1" />
+        <h3>School Project One</h3>
+        <p>A project I submitted for my web design subject.</p>
+        <a href="#" target="_blank">Open</a>
+      </div>
+
+      <div class="project school">
+        <img src="Jawod.file/figma.jpg" alt="School Project 2" />
+        <h3>School Project Two</h3>
+        <p>Output for my programming class.</p>
+        <a href="#" target="_blank">Open</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Script -->
+  <script>
+    function filterProjects(category) {
+      let projects = document.querySelectorAll('.project');
+      projects.forEach(project => {
+        if (category === 'all' || project.classList.contains(category)) {
+          project.style.display = 'block';
+        } else {
+          project.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:john.therence.jawod07@email.com">john.therence.jawod07@email.com</a></p>
+    <p>Number: 0993-412-9959</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 JOHN THERENCE G. JAWOD. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
